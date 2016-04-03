@@ -3,12 +3,14 @@
 
 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="world_name" value="$(find ins_gamepad_interaction)/worlds/dumpster.world"/>
+    <arg name="world_name" value="$(find ins_gamepad_interaction)/worlds/drill.world"/>
     <arg name="gui" value="true" />
     <arg name="use_sim_time" value="true" />
-    <arg name="paused" value="false"/>
+    <!-- better to let the physics paused -->
+    <arg name="paused" value="true"/>
   </include>
 
+  <node name="drill_3D_orientation" pkg="ins_gamepad_interaction" type="drill_3D_orientation" output="screen" />
 
 
 </launch>
