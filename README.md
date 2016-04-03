@@ -11,10 +11,12 @@ roscore
 rosrun rosserial_python serial_node.py /dev/ttyUSB0
 ```
 The topic "ins_gamepad" should be publishing now.
+
 Test 1: A drill rotates with orentation info from gamepad
 ```
 roslaunch ins_gamepad_interaction drill_3D_orientation.launch
 ```
+
 Test 2: A beer moves on the ground with 2D position info from gamepad
 ```
 roslaunch ins_gamepad_interaction beer_planar_position.launch
