@@ -16,6 +16,12 @@ void gamepadCallback(const ins_gamepad_interaction::ins_gamepad& msg_holder) {
     gamepad_data_updated = true;
 }
 
+// why the abs() function doesn't work here agian?
+float absolute(float u) {
+    if (u >= 0) return u;
+    else return -u;
+}
+
 int main(int argc, char **argv) {
     ros::init(argc, argv, "drill_3D_orientation");  // name of the node
     ros::NodeHandle nh;  // node handle
@@ -34,12 +40,14 @@ int main(int argc, char **argv) {
     set_model_state_srv_msg.request.model_state.pose.position.z = 0.2;  // set to 1m hieight
     
     // the loop
+    float squaresum;
     while (ros::ok()) {
         if (gamepad_data_updated) {
             // there are some bad data in the quaternion that make the drill flashes
             // need to delete these data
-            if  (abs(pow(gamepad_data.q0_klm, 2) + pow(gamepad_data.q1_klm, 2)
-                + pow(gamepad_data.q2_klm, 2) + pow(gamepad_data.q3_klm, 2) - 1) < 0.01) {
+            squaresum = pow(gamepad_data.q0_klm, 2) + pow(gamepad_data.q1_klm, 2)
+                + pow(gamepad_data.q2_klm, 2) + pow(gamepad_data.q3_klm, 2);
+            if  (absolute(squaresum - 1) < 0.2) {
                 // some quaternion don't even has square sum of 1
                 set_model_state_srv_msg.request.model_state.pose.orientation.w = gamepad_data.q0_klm;
                 set_model_state_srv_msg.request.model_state.pose.orientation.x = gamepad_data.q1_klm;
