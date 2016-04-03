@@ -37,7 +37,7 @@ int main(int argc, char **argv) {
     set_model_state_srv_msg.request.model_state.model_name = "drill";
     set_model_state_srv_msg.request.model_state.pose.position.x = 0.0;
     set_model_state_srv_msg.request.model_state.pose.position.y = 0.0;
-    set_model_state_srv_msg.request.model_state.pose.position.z = 0.2;  // set to 1m hieight
+    set_model_state_srv_msg.request.model_state.pose.position.z = 0.2;  // set to 0.2m hieight
     
     // the loop
     float squaresum;

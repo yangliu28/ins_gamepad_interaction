@@ -31,6 +31,7 @@ catkin_simple()
 # may add more of these lines for more nodes from the same package
 # cs_add_executable(example src/example.cpp)
 cs_add_executable(drill_3D_orientation src/drill_3D_orientation.cpp)
+cs_add_executable(beer_planar_position src/beer_planar_position.cpp)
 
 #the following is required, if desire to link a node in this package with a library created in this same package
 # edit the arguments to reference the named node and named library within this package

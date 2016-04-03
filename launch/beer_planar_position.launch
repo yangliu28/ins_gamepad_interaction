@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find ins_gamepad_interaction)/worlds/beer.world"/>
+    <arg name="gui" value="true" />
+    <arg name="use_sim_time" value="true" />  <!-- must be true to measure time in node -->
+    <arg name="paused" value="false"/>  <!-- should not pause, use the sim time now -->
+  </include>
+
+  <node name="beer_planar_position" pkg="ins_gamepad_interaction" type="beer_planar_position" output="screen" />
+
+
+</launch>
+
