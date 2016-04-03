@@ -1,5 +1,6 @@
 # ins_gamepad_interaction
 Virtual interaction in gazebo simulator with an INS (inertial navigation system) gamepad.
+Only the part concerned with ROS are included here.
 
 ## Demo test
 Get gamepad running and magnetometer calibrated. Get the coordinator xbee and arduino connected with computer.
