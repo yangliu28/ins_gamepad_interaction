@@ -1,5 +1,5 @@
 # ins_gamepad_interaction
-Virtual interaction in gazebo simulator with an INS (inertial navigation system) gamepad. This is for the project 1 of Algorithm Robotics of Spring2016, only the part concerned with ROS is here, Arduino programs running on gamepad and remote are included.
+Virtual interaction in gazebo simulator with an INS (inertial navigation system) gamepad. This is for the project 1 of Algorithm Robotics of Spring2016, only the part concerned with ROS is here, Arduino programs running on gamepad and remote are not included.
 
 ## Demo test
 Get gamepad running and magnetometer calibrated. Get the coordinator xbee and arduino connected with computer.
