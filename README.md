@@ -21,3 +21,6 @@ Test 2: A beer moves on the ground with 2D position info from gamepad
 roslaunch ins_gamepad_interaction beer_planar_position.launch
 ```
 
+Check the videos here:
+[https://youtu.be/6nd3b8hlRUQ](https://youtu.be/6nd3b8hlRUQ)
+[https://youtu.be/hUOOPmMk8YI](https://youtu.be/hUOOPmMk8YI)
