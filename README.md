@@ -22,5 +22,7 @@ roslaunch ins_gamepad_interaction beer_planar_position.launch
 ```
 
 Check the videos here:
+
 [https://youtu.be/6nd3b8hlRUQ](https://youtu.be/6nd3b8hlRUQ)
+
 [https://youtu.be/hUOOPmMk8YI](https://youtu.be/hUOOPmMk8YI)
